@@ -1,8 +1,8 @@
-import Storie from "./Storie"
+import Story from "./Story"
 
 export default function Stories() {
     return (<div class="stories">
-        <Storie/>
+        <Story/>
 
         <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>

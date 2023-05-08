@@ -1,10 +1,20 @@
-export default function Post() {
+export default function Post(props) {
+
+    const objeto_post = [
+        {perfil:'meowed',link_img: "assets/img/gato-telefone.svg", nome_img: "gato-telefone", curtida_nome: 'respondeai',num_curtida:101523},
+        {perfil:'barked',link_img: "assets/img/dog.svg", nome_img: "dog", curtida_nome: 'adorable_animals',num_curtida:99159},
+        {perfil:'meowed',link_img: "assets/img/gato-telefone.svg", nome_img: "gato-telefone", curtida_nome: '9gag',num_curtida:203580}
+    ]
+
+
     return (
-        <div class="post">
+        <ul>
+            {objeto_post.map(item=>
+        <li><div class="post">
             <div class="topo">
                 <div class="usuario">
-                    <img src="assets/img/meowed.svg" alt="meowed" />
-                    meowed
+                    <img src={`assets/img/${item.perfil}.svg`} alt={item.perfil} />
+                    {item.perfil}
                 </div>
                 <div class="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -12,7 +22,7 @@ export default function Post() {
             </div>
 
             <div class="conteudo">
-                <img src="assets/img/gato-telefone.svg" alt="gato-telefone" />
+                <img src={item.link_img} alt={item.nome_img}/>
             </div>
 
             <div class="fundo">
@@ -28,12 +38,12 @@ export default function Post() {
                 </div>
 
                 <div class="curtidas">
-                    <img src="assets/img/respondeai.svg" alt="respondeai" />
+                    <img src={`assets/img/${item.curtida_nome}.svg`} alt={item.curtida_nome} />
                     <div class="texto">
-                        Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                        Curtido por <strong>curtida_nome</strong> e <strong>outras {item.num_curtida} pessoas</strong>
                     </div>
                 </div>
             </div>
-        </div>
+        </div></li>)}</ul>
     );
 }

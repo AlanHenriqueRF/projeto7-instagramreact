@@ -1,4 +1,4 @@
-export default function Storie() {
+export default function Story() {
     const lista_nomes = ['9gag', 'meowed', 'barked', 'nathanwpylestrangeplanet', 'wawawicomics', 'respondeai', 'filomoderna', 'memeriagourmet'];
 
     return (
